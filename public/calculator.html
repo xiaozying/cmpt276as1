@@ -2,6 +2,7 @@
     <head>
         <title>My WebApp</title>
         <link rel="stylesheet" href="stylesheets/calculator.css"/>
+        <script src="calculator.js" defer></script>
     </head>
     <body class = "back">
         <div class = "black">  
@@ -28,37 +29,56 @@
                     <tr>
                         <th scope="row">Activity 1</th>
                         <td>A1</td>
-                        <td><input type ="number"style="width:30px"></td>
-                        <th scope="input"><input type ="number"style="width:30px">/<input type ="number"style="width:30px"></td>
-                        <td>%</td>
+                        <td><input id="weight" name="weight" type ="text" value="" style="width:30px"></td>
+                        <th scope="input">
+							<input id="grade" name="grade" type ="text" value="" style="width:30px" onchange="showResult(0)">
+							/
+							<input id="tgrade" name="tgrade" type ="text" value="" style="width:30px" onchange="showResult(0)"></td>
+                        <td id="percent0"></td>
                     </tr>
                     <tr>
                         <th scope="row">Activity 2</th>
                         <td>A2</td>
-                        <td><input type ="number"style="width:30px"></td>
-                        <th scope="input"><input type ="number"style="width:30px">/<input type ="number"style="width:30px"></td>
-                        <td>%</td>
+                        <td><input type ="text" name="weight" value="" style="width:30px"></td>
+                        <th scope="input">
+							<input type ="text" name="grade" value="" style="width:30px" onchange="showResult(1)">
+							/
+							<input type ="text" name="tgrade" value="" style="width:30px"  onchange="showResult(1)"></td>
+                        <td id="percent1"></td>
                         </tr>
                     <tr>
                         <th scope="row">Activity 3</th>
-                        <td>A3</td>
-                        <td><input type ="number"style="width:30px"></td>
-                        <th scope="input"><input type ="number"style="width:30px">/<input type ="number"style="width:30px"></td>
-                        <td>%</td>
+                        <td>A3</td> 
+                        <td><input type ="text" name="weight"  value="" style="width:30px"></td>
+                        <th scope="input">
+							<input type ="text" name="grade" value="" style="width:30px"  onchange="showResult(2)">
+							/
+							<input type ="text" name="tgrade" value="" style="width:30px" onchange="showResult(2)"></td>
+                        <td id="percent2"></td>
                     </tr>
                     <tr>
                         <th scope="row">Activity 4</th>
                         <td>A4</td>
-                        <td><input type ="number"style="width:30px"></td>
-                        <th scope="input"><input type ="number"style="width:30px">/<input type ="number"style="width:30px"></td>
-                        <td>%</td>
+                        <td><input type ="text" name="weight" value="" style="width:30px"></td>
+                        <th scope="input">
+							<input type ="text" name="grade" value="" style="width:30px" onchange="showResult(3)">
+							/
+							<input type ="text" name="tgrade" value="" style="width:30px" onchange="showResult(3)"></td>
+                        <td id="percent3"></td>
                     </tr>
                 </table>
-                <button class="button1">ADD ACTIVITY</button>
+                <div style="float: left; margin-left: 1.5%; margin-top: 1%;">
+                    <button id = "add" class="button2">ADD ACTIVITY</button>
+                </div>
+                
                 <h4 class ="red1">
-                    Result
+                    Result：<span id="resultShow"></span>
                 </h4>
-                <button class="button2">WEIGHTED</button> <button class="button3">MEAN</button>
+                <div style="float: right; margin-right: 3%; margin-top: 1%;">
+                    <button id ="weighted" class="button3">WEIGHTED</button> 
+                    <button id="mean" class="button3">MEAN</button>
+                </div>
+                
             </section>
         </div>
         </body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Tip Calculator</title>
+</head>
+
+<body>
+<!--container start-->
+  <div id="calculator">
+	<form>
+		<table id="numberingTable" class="table table-hover table-sm">
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Kamera</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>
+						<select id="kamera[0]">
+							<option selected value="0">Choose Model</option>
+							<option value="500">Model 1</option>
+							<option value="600">Model 2</option>
+							<option value="700">Model 3</option>
+							<option value="800">Model 4</option>
+							<option value="900">Model 5</option>
+						</select>
+					</td>
+					<td>
+						<select id="anzahl[0]">
+							<option selected value="0">Qty</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</td>
+					<td><button type="button" class="btn btn-xs btn-danger btnDeleteRowTable">Delete</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<br/>
+		<button type="button" class="btn btn-xs btn-primary btnAddRowTable">Add article</button>
+		<p>Whitch duration?</p>
+		<select id="laufzeit">
+			<option value="12">12 Months</option>
+			<option value="18">18 Months</option>
+			<option value="24">24 Months</option>
+		</select>
+	</form>
+	<button type="button" id="calculate">Calculate!</button>
+	<div id="totalTip">
+		<sup>€</sup><span id="tip">0.00</span>
+		<small id="each">Monatlich</small>
+	</div>
+</div>
+<!--container end-->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script type="text/javascript" src="tipcalculator.js"></script>
+
+</body>
+</html>
